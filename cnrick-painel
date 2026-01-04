@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>CN Trick Auxílio</title>
+
+<style>
+body {
+    background: #050d05;
+    font-family: Arial, sans-serif;
+    color: #00ff66;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 360px;
+    background: #0b1a0b;
+    border: 2px solid #00ff66;
+    border-radius: 12px;
+    box-shadow: 0 0 25px #00ff66;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+input, button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    background: #051005;
+    border: 1px solid #00ff66;
+    color: #00ff66;
+    border-radius: 6px;
+}
+
+button:hover {
+    background: #00ff66;
+    color: #000;
+    cursor: pointer;
+}
+
+.panel {
+    display: none;
+}
+
+.function {
+    margin-top: 10px;
+}
+
+.footer {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 12px;
+    opacity: 0.7;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container" id="login">
+    <h1>CN Trick Auxílio</h1>
+    <input type="password" id="senha" placeholder="Digite a senha">
+    <button onclick="verificarSenha()">Entrar</button>
+</div>
+
+<div class="container panel" id="painel">
+    <h1>CN Trick Auxílio</h1>
+
+    <div class="function">Aimbot: <input type="range" min="0" max="100"></div>
+    <div class="function">ESP: <input type="range" min="0" max="100"></div>
+    <div class="function">No Recoil: <input type="range" min="0" max="100"></div>
+    <div class="function">Aim Lock: <input type="checkbox"></div>
+    <div class="function">Aim FOV: <input type="range" min="0" max="180"></div>
+
+    <button onclick="abrirFF()">Abrir Free Fire</button>
+
+    <div class="footer">vip</div>
+</div>
+
+<script>
+function verificarSenha() {
+    const senha = document.getElementById("senha").value;
+    if (senha === "cn157") {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("painel").style.display = "block";
+    } else {
+        alert("Senha incorreta!");
+    }
+}
+
+function abrirFF() {
+    alert("Função nao abre o painel entre pelo Free Fire pelo app oficial.");
+}
+</script>
+
+</body>
+</html>
